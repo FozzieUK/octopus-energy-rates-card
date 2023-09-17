@@ -33,6 +33,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
             tr.rate_row{
                 text-align:center;
                 width:80px;
+                height: 24px;
             }
             td.time {
                 text-align:center;
@@ -119,7 +120,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
                 rates_list_length++;
             }
         });
-        const rows_per_col = 22;
+        const rows_per_col = 18;
 
         var tables = "";
         tables = tables.concat("<td><table class='sub_table'><tbody>");
