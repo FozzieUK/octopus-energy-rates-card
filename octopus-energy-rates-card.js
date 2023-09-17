@@ -29,6 +29,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
                 vertical-align: top;
                 padding: 2px;
                 spacing: 0px;
+                height: 24px;
             }
             tr.rate_row{
                 text-align:center;
