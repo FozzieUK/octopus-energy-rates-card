@@ -7,39 +7,12 @@ This lovelace card displays the Octopus Energy rate prices per each 30 minute sl
 data from sensors of the the excellent [BottlecapDave/HomeAssistant-OctopusEnergy](https://github.com/BottlecapDave/)
 integration.
 
-This provides a convenient, at a glance way to observe the prices on tariffs that change their price every 30 minutes, for example Octopus Agile.
+This provides a convenient, at a glance way to observe the prices on tariffs that change their price every 30 minutes, for Octopus Intelligent.
 
+EDITS: I have changed the card slightly so that the past ~12 hours of rates are always shown - thanks to Lozzd for the original card.
 
-#### Installation
-##### HACS
-The easiest way to install it is via [HACS (Home Assistant Community Store)](https://github.com/hacs/frontend). This will ensure you get updates automatically too. 
-
-Simply click this button to go directly to the details page:
-
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=lozzd&repository=octopus-energy-rates-card&category=plugin)
-    
-In the Home Assistant UI:
-* use HACS -> Frontend -> Top Right Menu -> Custom repositories
-* Enter a repo of `lozzd/octopus-energy-rates-card` and category of "Lovelace", and click the Add button
-* Click "Explore & Download Repositories" and start searching for "octo" and you should see the entry. 
-* Click "Download" in the bottom right
-
-This should automatically configure all the resources, so you can now skip to **Configuration**
-
-##### Manually
-You can also install manually by downloading/copying the Javascript file in to `$homeassistant_config_dir/www/community/` and then add the Javascript file to Lovelace in the Home Assistant UI by using
-Settings -> Dashboards -> Top Right Menu -> Resources
 
 #### Configuration
-Add the card to your dashboard using **Add Card -> Custom: Octopus Energy Rates Card**
-
-You'll need to then configure the yaml yourself - the `type` part is filled out for you. 
-
-The only **required** key is the name of the entity sensor that contains the rates
-
-The easiest way to find that entity name is by opening the Search within Home Assistant: search for `current_rate` -> click the chosen result -> choose the Settings tab -> copy `Entity ID`
-
-(The format is `sensor.octopus_energy_electricity_{{METER_SERIAL_NUMBER}}_{{MPAN_NUMBER}}_current_rate`)
 
 Here's an example yaml configuration:
 
