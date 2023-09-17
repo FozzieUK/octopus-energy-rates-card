@@ -227,7 +227,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
     // The height of your card. Home Assistant uses this to automatically
     // distribute all cards over the available columns.
     getCardSize() {
-        return 3;
+        return 2;
     }
 }
 
