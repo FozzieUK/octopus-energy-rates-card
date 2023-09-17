@@ -119,7 +119,6 @@ class OctopusEnergyRatesCard extends HTMLElement {
                 rates_list_length++;
             }
         });
-        const rows_per_col = Math.ceil(rates_list_length / config.cols);
         const rows_per_col = 10;
 
         var tables = "";
@@ -192,7 +191,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
 
         const defaultConfig = {
             // Controls how many columns the rates split in to
-            cols: 3,
+            cols: 1,
             // Show rates that already happened in the card
             showpast: false,
             // Show the day of the week with the time
