@@ -120,7 +120,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
                 rates_list_length++;
             }
         });
-        const rows_per_col = 22;
+        const rows_per_col = 24;
 
         var tables = "";
         tables = tables.concat("<td><table class='sub_table'><tbody>");
