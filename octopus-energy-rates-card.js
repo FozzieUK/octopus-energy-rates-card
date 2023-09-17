@@ -33,7 +33,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
             }
             tr.rate_row{
                 text-align:center;
-                width:70px;
+                width:60px;
                 padding: 0px;
             }
             td.time {
@@ -56,7 +56,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
                 color:white;
                 text-align:center;
                 vertical-align: middle;
-                width:70px;
+                width:60px;
                 border-top-right-radius:15px;
                 border-bottom-right-radius:15px;
             }
