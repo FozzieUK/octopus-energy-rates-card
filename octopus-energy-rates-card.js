@@ -13,6 +13,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
                 width: 100%;
                 padding: 0px;
                 spacing: 0px;
+                style="font-size: 12px;"
             }
             table.sub_table {
                 border-collapse: seperate;
@@ -58,8 +59,6 @@ class OctopusEnergyRatesCard extends HTMLElement {
                 text-align:center;
                 vertical-align: middle;
                 width:80px;
-                style="font-size: 12px;"
-                height: 24px;
                 border-top-right-radius:15px;
                 border-bottom-right-radius:15px;
             }
