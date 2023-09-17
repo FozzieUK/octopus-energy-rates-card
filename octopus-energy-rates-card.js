@@ -5,7 +5,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
             const card = document.createElement('ha-card');
             card.header = config.title;
             this.content = document.createElement('div');
-            this.content.style.padding = '0 16px 16px';
+            this.content.style.padding = '0 12px 12px';
 
             const style = document.createElement('style');
             style.textContent = `
@@ -13,7 +13,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
                 width: 100%;
                 padding: 0px;
                 spacing: 0px;
-                style='font-size: 12px;'
+                height: 20px;
             }
             table.sub_table {
                 border-collapse: seperate;
@@ -143,7 +143,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
             else if(key.value_inc_vat <= 0 ) colour = colours[3];
 
             if(showpast || (date - Date.parse(new Date())>-41400000)) {
-                table = table.concat("<tr class='rate_row' style='font-size: 12px; height: 24px;'><td class='time time_"+colour+"'>" + date_locale + time_locale + 
+                table = table.concat("<tr class='rate_row' style='font-size: 12px; height: 20px;'><td class='time time_"+colour+"'>" + date_locale + time_locale + 
                         "</td><td class='rate "+colour+"'>" + key.value_inc_vat.toFixed(roundUnits) + unitstr + "</td></tr>");
                 if (x % rows_per_col == 0) {
                     tables = tables.concat(table);
