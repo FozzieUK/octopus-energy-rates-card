@@ -33,7 +33,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
             }
             tr.rate_row{
                 text-align:center;
-                width:80px;
+                width:70px;
                 padding: 0px;
             }
             td.time {
@@ -56,7 +56,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
                 color:white;
                 text-align:center;
                 vertical-align: middle;
-                width:80px;
+                width:70px;
                 border-top-right-radius:15px;
                 border-bottom-right-radius:15px;
             }
@@ -143,7 +143,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
             else if(key.value_inc_vat <= 0 ) colour = colours[3];
 
             if(showpast || (date - Date.parse(new Date())>-41400000)) {
-                table = table.concat("<tr class='rate_row' style='font-size: 12px; height: 18px;'><td class='time time_"+colour+"'>" + date_locale + time_locale + 
+                table = table.concat("<tr class='rate_row' style='font-size: 13px; height: 18px;'><td class='time time_"+colour+"'>" + date_locale + time_locale + 
                         "</td><td class='rate "+colour+"'>" + key.value_inc_vat.toFixed(roundUnits) + unitstr + "</td></tr>");
                 if (x % rows_per_col == 0) {
                     tables = tables.concat(table);
