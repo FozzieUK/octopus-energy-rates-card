@@ -191,7 +191,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
 
         const defaultConfig = {
             // Controls how many columns the rates split in to
-            cols: 1,
+            cols: 2,
             // Show rates that already happened in the card
             showpast: false,
             // Show the day of the week with the time
