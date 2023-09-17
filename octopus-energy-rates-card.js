@@ -56,7 +56,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
                 color:white;
                 text-align:center;
                 vertical-align: middle;
-                width:40px;
+                width:46px;
                 border-top-right-radius:15px;
                 border-bottom-right-radius:15px;
             }
