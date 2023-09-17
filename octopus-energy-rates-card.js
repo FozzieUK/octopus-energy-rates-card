@@ -27,14 +27,15 @@ class OctopusEnergyRatesCard extends HTMLElement {
             }
             td {
                 vertical-align: top;
-                padding: 2px;
+                padding: 1px;
                 spacing: 0px;
                 height: 24px;
             }
             tr.rate_row{
                 text-align:center;
                 width:80px;
-                height: 32px !important;
+                height: 24px;
+                padding: 1px;
             }
             td.time {
                 text-align:center;
@@ -121,7 +122,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
                 rates_list_length++;
             }
         });
-        const rows_per_col = 24;
+        const rows_per_col = 32;
 
         var tables = "";
         tables = tables.concat("<td><table class='sub_table'><tbody>");
