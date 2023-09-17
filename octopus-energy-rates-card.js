@@ -145,7 +145,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
             else if(key.value_inc_vat <= 0 ) colour = colours[3];
 
             if(showpast || (date - Date.parse(new Date())>-41400000)) {
-                table = table.concat("<tr class='rate_row' style='font-size: 12px;'><td class='time time_"+colour+"'>" + date_locale + time_locale + 
+                table = table.concat("<tr class='rate_row' style='font-size: 12px; height: 24px;'><td class='time time_"+colour+"'>" + date_locale + time_locale + 
                         "</td><td class='rate "+colour+"'>" + key.value_inc_vat.toFixed(roundUnits) + unitstr + "</td></tr>");
                 if (x % rows_per_col == 0) {
                     tables = tables.concat(table);
