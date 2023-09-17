@@ -120,6 +120,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
             }
         });
         const rows_per_col = Math.ceil(rates_list_length / config.cols);
+        const rows_per_col = 10;
 
         var tables = "";
         tables = tables.concat("<td><table class='sub_table'><tbody>");
@@ -227,7 +228,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
     // The height of your card. Home Assistant uses this to automatically
     // distribute all cards over the available columns.
     getCardSize() {
-        return 2;
+        return 3;
     }
 }
 
