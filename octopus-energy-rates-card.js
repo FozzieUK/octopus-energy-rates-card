@@ -5,7 +5,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
             const card = document.createElement('ha-card');
             card.header = config.title;
             this.content = document.createElement('div');
-            this.content.style.padding = '0 16px 16px';
+            this.content.style.padding = '0 10px 10px';
 
             const style = document.createElement('style');
             style.textContent = `
@@ -13,10 +13,11 @@ class OctopusEnergyRatesCard extends HTMLElement {
                 width: 100%;
                 padding: 0px;
                 spacing: 0px;
+                height: 18px;
             }
             table.sub_table {
                 border-collapse: seperate;
-                border-spacing: 0px 2px;
+                border-spacing: 0px 1px;
             }
             table.main {
                 padding: 0px;
@@ -27,12 +28,13 @@ class OctopusEnergyRatesCard extends HTMLElement {
             }
             td {
                 vertical-align: top;
-                padding: 2px;
+                padding: 1px;
                 spacing: 0px;
             }
             tr.rate_row{
                 text-align:center;
-                width:80px;
+                width:70px;
+                padding: 0px;
             }
             td.time {
                 text-align:center;
@@ -60,7 +62,7 @@ class OctopusEnergyRatesCard extends HTMLElement {
                 color:white;
                 text-align:center;
                 vertical-align: middle;
-                width:80px;
+                width:52px;
 
                 border-top-right-radius:15px;
                 border-bottom-right-radius:15px;
@@ -184,12 +186,12 @@ class OctopusEnergyRatesCard extends HTMLElement {
             rates_processingRow ++;
             var ratesToEvaluate = key.value_inc_vat * multiplier;
 
-            if(showpast || (date - Date.parse(new Date())>-1800000)) 
+            if(showpast || (date - Date.parse(new Date())>-41400000)) 
             {
                 rates_currentNumber++;
                 
                 // Find the cheapest rate that hasn't past yet
-                if ((ratesToEvaluate < cheapest_rate) && (date - Date.parse(new Date())>-1800000)) cheapest_rate = ratesToEvaluate;
+                if ((ratesToEvaluate < cheapest_rate) && (date - Date.parse(new Date())>-41400000)) cheapest_rate = ratesToEvaluate;
                 
                 // If we don't want to combine same values rates then just push them to new display array
                 if (!combinerate){
